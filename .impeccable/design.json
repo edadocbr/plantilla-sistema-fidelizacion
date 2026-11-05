@@ -1,0 +1,383 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T06:35:59.000Z",
+  "title": "Design System: Interfaz de Caja · Fidelización",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "canonical": "oklch(0.205 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.205 0 0)",
+          "oklch(0.3 0 0)",
+          "oklch(0.4 0 0)",
+          "oklch(0.55 0 0)",
+          "oklch(0.7 0 0)",
+          "oklch(0.85 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(1 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.3 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.78 0 0)",
+          "oklch(0.9 0 0)",
+          "oklch(0.97 0 0)",
+          "oklch(1 0 0)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(0.48 0 0)",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.25 0 0)",
+          "oklch(0.35 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.62 0 0)",
+          "oklch(0.78 0 0)",
+          "oklch(0.9 0 0)",
+          "oklch(0.97 0 0)"
+        ]
+      },
+      "alert-red": {
+        "role": "semantic",
+        "displayName": "Alert Red",
+        "canonical": "oklch(0.577 0.245 27.325)",
+        "tonalRamp": [
+          "oklch(0.2 0.07 27)",
+          "oklch(0.3 0.12 27)",
+          "oklch(0.42 0.18 27)",
+          "oklch(0.577 0.245 27.325)",
+          "oklch(0.68 0.19 27)",
+          "oklch(0.8 0.11 27)",
+          "oklch(0.9 0.05 27)",
+          "oklch(0.96 0.02 27)"
+        ]
+      },
+      "qr-white": {
+        "role": "neutral",
+        "displayName": "QR White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#000000",
+          "#242424",
+          "#494949",
+          "#6d6d6d",
+          "#929292",
+          "#b6b6b6",
+          "#dbdbdb",
+          "#ffffff"
+        ]
+      },
+      "qr-black": {
+        "role": "neutral",
+        "displayName": "QR Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#0a0a0a",
+          "#141414",
+          "#1e1e1e",
+          "#282828",
+          "#323232",
+          "#3c3c3c",
+          "#464646"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Saldo",
+        "purpose": "Saldo del cliente en cifras tabulares."
+      },
+      "headline": {
+        "displayName": "Campo grande",
+        "purpose": "Valor de los campos de DNI y monto."
+      },
+      "title": {
+        "displayName": "Título de sección",
+        "purpose": "Encabezados de zona y nombre del cliente."
+      },
+      "body": {
+        "displayName": "Cuerpo",
+        "purpose": "Alertas, nombres de recompensa y ayudas."
+      },
+      "label": {
+        "displayName": "Etiqueta",
+        "purpose": "Etiquetas de campo y badges."
+      },
+      "fonts": {
+        "displayName": "Familias",
+        "purpose": "Sans: Figtree (--font-figtree, next/font/google). Mono: Geist Mono (--font-geist-mono) para hexadecimales y datos estructurados. Cifras tabulares con tabular-nums sobre Figtree."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Única curva de UI (Emil Kowalski). Sin ease-in."
+      },
+      {
+        "name": "dur-fast",
+        "value": "120ms",
+        "purpose": "Respuesta de botón al pulsar (scale 0.97)."
+      },
+      {
+        "name": "dur-base",
+        "value": "180ms",
+        "purpose": "Entrada de fase y alertas (translateY + opacity)."
+      },
+      {
+        "name": "motion-pop",
+        "value": "scale(0.9→1) + opacity, 180ms var(--ease-out)",
+        "purpose": "Casillero de sello recién ganado en la Vista del Cliente. Nunca parte de scale(0)."
+      },
+      {
+        "name": "dur-slow",
+        "value": "240ms",
+        "purpose": "Barra de progreso y toast. Máximo de UI."
+      },
+      {
+        "name": "reduced-motion-fade",
+        "value": "80ms linear, solo opacity",
+        "purpose": "Reemplazo de toda animación con movimiento bajo prefers-reduced-motion."
+      },
+      {
+        "name": "default-transition",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1), 120ms",
+        "purpose": "--default-transition-timing-function y --default-transition-duration: toda transition-* de Tailwind hereda la curva oficial."
+      },
+      {
+        "name": "sheet-dialog",
+        "value": "240ms var(--ease-out); sheet translateX borde a borde, dialog scale(0.95→1)",
+        "purpose": "Overlays del panel de administración; overlay de fondo a 120ms."
+      },
+      {
+        "name": "menus",
+        "value": "120ms var(--ease-out); scale(0.95→1) desde el disparador",
+        "purpose": "dropdown-menu, popover, select y tooltip; también interruptor y pestañas."
+      },
+      {
+        "name": "recharts",
+        "value": "isAnimationActive={false}",
+        "purpose": "El gráfico de barras no anima: su animación interna cambia la altura."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "container",
+        "value": "42rem (max-w-2xl)"
+      },
+      {
+        "name": "customer-container",
+        "value": "28rem (max-w-md)"
+      },
+      {
+        "name": "admin-sidebar",
+        "value": "1024px (bajo este ancho el sidebar es un sheet)"
+      },
+      {
+        "name": "admin-two-column",
+        "value": "1280px (gráfico 7/12 y actividad 5/12)"
+      }
+    ],
+    "density": [
+      {
+        "name": "control-desktop",
+        "value": "40px",
+        "purpose": "Controles del panel de administración con puntero."
+      },
+      {
+        "name": "row-desktop",
+        "value": "44px",
+        "purpose": "Filas de tabla del panel de administración."
+      },
+      {
+        "name": "touch",
+        "value": "48px",
+        "purpose": "Mínimo táctil en Caja, Cliente y administración bajo 1024 px."
+      },
+      {
+        "name": "touch-primary",
+        "value": "56px",
+        "purpose": "Acción primaria y campos de Caja."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción primaria de cada momento: Buscar, Registrar compra, Asignar sello.",
+      "html": "<button class=\"ds-btn-primary\">Registrar compra</button>",
+      "css": ".ds-btn-primary { height: 56px; padding: 0 24px; width: 100%; border: 1px solid transparent; border-radius: 10px; background: var(--primary); color: var(--primary-foreground); font-size: 1rem; font-weight: 500; cursor: pointer; transition: translate 120ms var(--ease-out), scale 120ms var(--ease-out), opacity 120ms var(--ease-out); } .ds-btn-primary:active { scale: 0.97; } .ds-btn-primary:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); } .ds-btn-primary:disabled { opacity: 0.5; pointer-events: none; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Acción secundaria: Canjear, Reintentar, Cancelar.",
+      "html": "<button class=\"ds-btn-outline\">Canjear</button>",
+      "css": ".ds-btn-outline { height: 48px; padding: 0 20px; width: 100%; border: 1px solid var(--border); border-radius: 10px; background: var(--background); color: var(--foreground); font-size: 1rem; font-weight: 500; cursor: pointer; transition: translate 120ms var(--ease-out), scale 120ms var(--ease-out), opacity 120ms var(--ease-out); } .ds-btn-outline:hover { background: var(--muted); } .ds-btn-outline:active { scale: 0.97; } .ds-btn-outline:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); }"
+    },
+    {
+      "name": "DNI Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Campo numérico grande para el DNI de 8 dígitos.",
+      "html": "<label class=\"ds-field-label\" for=\"dni\">DNI del cliente</label><input id=\"dni\" class=\"ds-input\" inputmode=\"numeric\" placeholder=\"8 dígitos\" value=\"70123456\">",
+      "css": ".ds-field-label { display: block; margin-bottom: 8px; font-size: 0.875rem; font-weight: 500; } .ds-input { height: 56px; width: 100%; padding: 0 16px; border: 1px solid var(--input); border-radius: 10px; background: transparent; color: var(--foreground); font-size: 1.5rem; font-weight: 500; letter-spacing: 0.1em; font-variant-numeric: tabular-nums; outline: none; } .ds-input::placeholder { color: var(--muted-foreground); letter-spacing: 0; } .ds-input:focus-visible { border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); }"
+    },
+    {
+      "name": "Error Alert",
+      "kind": "custom",
+      "refersTo": "alert-error",
+      "description": "Alerta inline no obstructiva para errores de red o de cliente.",
+      "html": "<div class=\"ds-alert\" role=\"alert\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg><div><p class=\"ds-alert-title\">Cliente no encontrado</p><p class=\"ds-alert-desc\">Verifique el DNI o invite al cliente a registrarse.</p></div></div>",
+      "css": ".ds-alert { display: grid; grid-template-columns: auto 1fr; gap: 0 8px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--destructive); font-size: 0.875rem; } .ds-alert svg { margin-top: 2px; } .ds-alert-title { margin: 0; font-size: 1rem; font-weight: 500; } .ds-alert-desc { margin: 2px 0 0; color: color-mix(in oklch, var(--destructive) 90%, transparent); }"
+    },
+    {
+      "name": "Profile Card",
+      "kind": "card",
+      "refersTo": "card-profile",
+      "description": "Perfil mínimo del cliente con saldo y avance a la recompensa.",
+      "html": "<div class=\"ds-card\"><p class=\"ds-card-name\">Ana Torres Quispe</p><p class=\"ds-card-meta\">DNI 70123456 · Inscrito el 14 mar 2025</p><p class=\"ds-card-balance\">1 240 <span>puntos</span></p><div class=\"ds-progress\"><div class=\"ds-progress-bar\"></div></div><p class=\"ds-card-meta\">Faltan 260 pts para Descuento de S/ 10</p></div>",
+      "css": ".ds-card { display: flex; flex-direction: column; gap: 12px; padding: 16px; border-radius: 14px; background: var(--card); color: var(--card-foreground); box-shadow: 0 0 0 1px color-mix(in oklch, var(--foreground) 10%, transparent); } .ds-card p { margin: 0; } .ds-card-name { font-size: 1.25rem; font-weight: 600; } .ds-card-meta { font-size: 0.875rem; color: var(--muted-foreground); font-variant-numeric: tabular-nums; } .ds-card-balance { font-size: 3rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; } .ds-card-balance span { font-size: 1.125rem; font-weight: 400; color: var(--muted-foreground); } .ds-progress { height: 12px; overflow: hidden; border-radius: 9999px; background: var(--muted); } .ds-progress-bar { height: 100%; width: 100%; background: var(--primary); transform: translateX(-20%); transition: transform 240ms var(--ease-out); }"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "badge-status",
+      "description": "Modo del programa y estado de conexión en el encabezado.",
+      "html": "<span class=\"ds-badge\">Puntos</span>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 9999px; background: var(--secondary); color: var(--secondary-foreground); font-size: 0.875rem; font-weight: 500; }"
+    },
+    {
+      "name": "Stamp Grid",
+      "kind": "custom",
+      "refersTo": "stamp-earned",
+      "description": "Cuadrícula 5×2 de sellos del pase del cliente: ganados rellenos con check, faltantes en contorno.",
+      "html": "<div class=\"ds-stamps\" role=\"img\" aria-label=\"3 de 5 sellos\"><div class=\"ds-stamp ds-stamp-on\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg></div><div class=\"ds-stamp ds-stamp-on\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg></div><div class=\"ds-stamp ds-stamp-on\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg></div><div class=\"ds-stamp\">4</div><div class=\"ds-stamp\">5</div></div>",
+      "css": ".ds-stamps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; } .ds-stamp { display: grid; place-items: center; aspect-ratio: 1; border-radius: 10px; font-size: 0.875rem; color: var(--muted-foreground); box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--foreground) 25%, transparent); font-variant-numeric: tabular-nums; } .ds-stamp-on { background: var(--primary); color: var(--primary-foreground); box-shadow: none; }"
+    },
+    {
+      "name": "Reward Row",
+      "kind": "custom",
+      "refersTo": "reward-row",
+      "description": "Recompensa disponible en el pase del cliente (informativa; el canje lo hace Caja).",
+      "html": "<div class=\"ds-reward\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"4\" rx=\"1\"/><path d=\"M12 8v13\"/><path d=\"M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7\"/><path d=\"M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5\"/></svg><div><p class=\"ds-reward-title\">Café gratis</p><p class=\"ds-reward-desc\">Muéstrala en caja para canjearla</p></div><span class=\"ds-reward-cost\">500 pts</span></div>",
+      "css": ".ds-reward { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 10px; background: var(--primary); color: var(--primary-foreground); } .ds-reward p { margin: 0; } .ds-reward-title { font-weight: 500; } .ds-reward-desc { font-size: 0.875rem; opacity: 0.85; } .ds-reward-cost { margin-left: auto; font-size: 0.875rem; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "QR Pass",
+      "kind": "custom",
+      "refersTo": "qr-panel",
+      "description": "Panel del QR del cliente y DNI de respaldo. Estáticos, sin animación.",
+      "html": "<div class=\"ds-qr-wrap\"><div class=\"ds-qr\"><svg viewBox=\"0 0 29 29\" width=\"200\" height=\"200\" shape-rendering=\"crispEdges\"><rect width=\"29\" height=\"29\" fill=\"#fff\"/><path fill=\"#000\" d=\"M2 2h7v7H2zM20 2h7v7h-7zM2 20h7v7H2zM11 11h2v2h-2zM15 13h3v3h-3zM11 17h2v2h-2zM20 18h2v2h-2zM23 22h4v3h-4z\"/></svg></div><p class=\"ds-qr-id\">70123456</p></div>",
+      "css": ".ds-qr-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; } .ds-qr { padding: 12px; border-radius: 14px; background: #fff; box-shadow: 0 0 0 1px color-mix(in oklch, var(--foreground) 10%, transparent); } .ds-qr svg { display: block; } .ds-qr-id { margin: 0; font-size: 1.5rem; font-weight: 500; letter-spacing: 0.1em; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Desktop Button",
+      "kind": "button",
+      "refersTo": "button-desktop",
+      "description": "Botón del panel de administración con puntero: 40 px.",
+      "html": "<button class=\"ds-btn-desktop\">Guardar cambios</button>",
+      "css": ".ds-btn-desktop { height: 40px; padding: 0 16px; border: 1px solid transparent; border-radius: 10px; background: var(--primary); color: var(--primary-foreground); font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: translate 120ms var(--ease-out), scale 120ms var(--ease-out), opacity 120ms var(--ease-out); } .ds-btn-desktop:active { scale: 0.97; } .ds-btn-desktop:focus-visible { outline: none; border-color: var(--ring); box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); } .ds-btn-desktop:disabled { opacity: 0.5; pointer-events: none; }"
+    },
+    {
+      "name": "Table Row",
+      "kind": "custom",
+      "refersTo": "table-row-desktop",
+      "description": "Fila de la tabla de clientes: 44 px, cifras tabulares, estado como insignia.",
+      "html": "<table class=\"ds-table\"><thead><tr><th scope=\"col\">Cliente</th><th scope=\"col\" class=\"ds-r\">Saldo</th><th scope=\"col\">Estado</th></tr></thead><tbody><tr><td><span class=\"ds-name\">Ana Torres Quispe</span><span class=\"ds-sub\">DNI 70123456</span></td><td class=\"ds-r\">1 240</td><td><span class=\"ds-pill\">Activo</span></td></tr></tbody></table>",
+      "css": ".ds-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; } .ds-table th { height: 40px; padding: 0 16px; text-align: left; font-weight: 500; color: var(--muted-foreground); border-bottom: 1px solid var(--border); } .ds-table td { height: 44px; padding: 0 16px; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; } .ds-table tbody tr:hover { background: color-mix(in oklch, var(--muted) 50%, transparent); } .ds-r { text-align: right; } .ds-name { display: block; font-weight: 500; } .ds-sub { display: block; color: var(--muted-foreground); } .ds-pill { display: inline-flex; align-items: center; height: 24px; padding: 0 10px; border-radius: 9999px; background: var(--primary); color: var(--primary-foreground); font-size: 0.875rem; font-weight: 500; }"
+    },
+    {
+      "name": "Sidebar Item",
+      "kind": "nav",
+      "refersTo": "sidebar-desktop",
+      "description": "Destino del sidebar de 240 px, estático, con atajo visible.",
+      "html": "<nav class=\"ds-side\"><a class=\"ds-side-item ds-active\" href=\"#\">Resumen<span class=\"ds-keys\"><kbd>g</kbd><kbd>r</kbd></span></a><a class=\"ds-side-item\" href=\"#\">Clientes<span class=\"ds-keys\"><kbd>g</kbd><kbd>c</kbd></span></a></nav>",
+      "css": ".ds-side { width: 240px; padding: 8px; } .ds-side-item { display: flex; align-items: center; height: 40px; padding: 0 12px; border-radius: 10px; color: var(--foreground); font-size: 0.875rem; text-decoration: none; } .ds-side-item:hover { background: var(--muted); } .ds-side-item:focus-visible { outline: none; box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 50%, transparent); } .ds-active { background: var(--muted); font-weight: 500; } .ds-keys { margin-left: auto; display: inline-flex; gap: 2px; } .ds-keys kbd { padding: 0 6px; border-radius: 6px; background: var(--muted); color: var(--muted-foreground); font-size: 0.75rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Till Instrument",
+    "overview": "Un instrumento de mostrador: neutro, preciso y silencioso. La pantalla de Caja se usa de pie, con el cliente esperando, a menudo bajo luz de tienda y con una mano. No compite por atención: el saldo, el campo de DNI y la acción primaria son lo único que pesa. El sistema usa tinta casi negra sobre papel blanco, sin color de marca, y reserva el rojo para errores. La Vista del Cliente (/customer) sigue en modo Operate: una sola pantalla móvil con el QR como foco estático. Al ser de baja frecuencia, admite micro-animaciones puntuales de refuerzo (motion-pop en casilleros ganados y entrada en el panel de progreso), manteniendo el QR y el DNI inmóviles desde el primer fotograma. El Panel de Administración (/admin) es Operate puro y desktop-first: alta densidad (controles de 40 px, filas de 44 px), sidebar estático de 240 px y navegación sin recargas, sin delight. Tipografía: Figtree como sans principal; Geist Mono solo para datos estructurados.",
+    "keyCharacteristics": [
+      "Neutral monocromo; el único color es el rojo de error.",
+      "Objetivos táctiles de 48 px, y 56 px para la acción primaria y los campos.",
+      "Saldo en cifras tabulares grandes, siempre visible.",
+      "Plano: sin sombras, profundidad por anillos de 1 px.",
+      "Movimiento mínimo y funcional, solo transform y opacity."
+    ],
+    "rules": [
+      {
+        "name": "The No-Color-Alone Rule",
+        "body": "Éxito, error e información nunca dependen solo del color: llevan icono y texto.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Red Rule",
+        "body": "El rojo significa error o falta de conexión y nada más.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Todo número que cambia (saldo, monto, puntos, DNI, costos) usa cifras tabulares para que no salte al actualizarse.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Las superficies son planas; la jerarquía viene del tamaño, el peso y el contraste, no de la elevación.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Scannable Rule",
+        "body": "El QR nunca se tiñe ni se invierte: contraste máximo fijo.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do mantener una sola pantalla con dos fases que intercambian contenido en el mismo lugar; confirmar canjes y mostrar errores inline.",
+      "Do usar --ease-out: cubic-bezier(0.23, 1, 0.32, 1) y los tokens --dur-fast/base/slow para toda animación de UI, limitada a transform y opacity.",
+      "Do dar a cada control táctil 48 px como mínimo y 56 px a la acción primaria.",
+      "Do usar cifras tabulares para saldo, montos y DNI.",
+      "Do acompañar éxito, error e información con icono y texto, no solo con color.",
+      "Do escribir el código, las rutas y los identificadores en inglés y la interfaz visible en español (es-PE).",
+      "Do preferir componentes del registry oficial de shadcn/ui (radix-nova) antes que de registries externos.",
+      "Do mantener el QR y el DNI de respaldo inmóviles desde el primer fotograma, en negro sobre blanco.",
+      "Do limitar el delight a la Vista del Cliente y a motion-pop desde scale(0.9).",
+      "Do usar la escala de escritorio (controles de 40 px, filas de 44 px) solo en el panel de administración con puntero, y 48 px en vistas táctiles.",
+      "Do mantener isAnimationActive={false} en todo gráfico de recharts.",
+      "Do dejar el sidebar de escritorio estático y desplazarlo solo con translateX en móvil."
+    ],
+    "donts": [
+      "Don't usar modales, páginas intermedias ni navegación secundaria en Caja.",
+      "Don't usar transition-all, ease-in, ni animar height, width, top, margin, sombras o color.",
+      "Don't superar 240 ms en animaciones de UI (nunca 300 ms).",
+      "Don't mantener desplazamientos o escalas con prefers-reduced-motion; deja solo fundidos de 80 ms o menos.",
+      "Don't introducir colores de marca, gradientes ni sombras que no estén en el sistema actual.",
+      "Don't usar rojo para nada que no sea error o falta de conexión.",
+      "Don't usar emoji ni glifos como iconos; usar Lucide.",
+      "Don't animar, teñir ni envolver en una entrada animada el QR o el DNI de respaldo.",
+      "Don't partir ninguna escala de scale(0); el mínimo es scale(0.9).",
+      "Don't llevar el delight a Caja ni al panel de administración.",
+      "Don't poner sticky en el <thead> dentro del contenedor de table.",
+      "Don't bajar de 40 px en controles de escritorio ni de 48 px en vistas táctiles.",
+      "Don't volver a Geist como fuente sans."
+    ]
+  }
+}
