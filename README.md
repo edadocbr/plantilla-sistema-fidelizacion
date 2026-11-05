@@ -2,7 +2,8 @@
 
 Este repositorio contiene un **boceto inicial de alta fidelidad** de un sistema de fidelización para comercios. Las pantallas y los flujos principales ya están construidos y validados, pero forman parte de un proyecto más grande que evolucionará hacia una implementación completa.
 
-El nombre del repositorio (`credenciales_plantilla`) y el nombre del producto son **provisionales** y podrían cambiar en futuras iteraciones. Del mismo modo, la estructura, los datos de demostración y algunos comportamientos de esta versión no deben interpretarse como la arquitectura definitiva del sistema.
+> [!IMPORTANT]
+> **Nombre provisional  del repositorio:** El nombre del repositorio es **temporal** y **podría** en futuras iteraciones. La estructura, los datos de demostración y algunos comportamientos de esta versión tampoco deben interpretarse como la arquitectura definitiva del sistema.
 
 ## Alcance del boceto
 
@@ -14,7 +15,7 @@ La aplicación permite recorrer la experiencia completa desde tres perspectivas:
 
 Los datos utilizados son de demostración y viven en la sesión del navegador. No existe todavía una integración con un backend real ni un sistema de autenticación de producción.
 
-## Arquitectura de diseño (metodología)
+## Arquitectura de diseño
 
 La interfaz fue construida utilizando **herramientas avanzadas de diseño asistido por IA**, con una metodología centrada en la claridad operativa, la jerarquía visual y el craft de interacción.
 
@@ -38,7 +39,7 @@ Las **Skills de Emil Kowalski** guiaron el craft de la animación y las transici
 - Sin animaciones decorativas en las vistas operativas.
 - Soporte completo de `prefers-reduced-motion`: las animaciones se reducen a fundidos breves o se desactivan.
 
-## Guía de navegación y pruebas (rutas)
+## Guía de navegación y pruebas
 
 Con el servidor de desarrollo en marcha, abre `http://localhost:3000` y navega a cualquiera de las siguientes rutas.
 
